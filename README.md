@@ -332,6 +332,10 @@ if __name__ == "__main__":
 ## Results
 
 ### Plot The Training Loss With 30 Epoch
+Untuk training data pada dataset ini, menggunakan 30 epoch. Nilai loss awal sekitar 1.6, lalu secara konsisten menurun hingga mencapai nilai mendekati 0.2 pada akhir epoch ke-30.
+Ini menunjukkan bahwa model sedang belajar dengan baik dari data pelatihan. Penurunan loss berarti model semakin baik memprediksi hasil dengan mengurangi kesalahan selama pelatihan. mungkin bisa lebih optimal ketika melakukan 50 - 100 epoch. Kurva loss juga terlihat halus dan tidak ada lonjakan besar. Hal ini mengindikasikan bahwa learning rate yang digunakan sudah sesuai dan model terhindar dari masalah seperti diverging atau overfitting dalam proses pelatihan.
+
+
 <p align="center">
 <a href=""><img src="https://github.com/user-attachments/assets/b4907adb-e6f6-4277-9831-6129bd480eea" alt="Training"></a>
 <p/>
