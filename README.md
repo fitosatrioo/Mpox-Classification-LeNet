@@ -15,3 +15,8 @@ Dari Juni 2022 hingga Mei 2023, Dataset Lesi Kulit Mpox (MSLD) telah mengalami d
 https://www.kaggle.com/datasets/joydippaul/mpox-skin-lesion-dataset-version-20-msld-v20/data
 
 ## About Dataset
+Dataset ini dibagi ke dalam dua folder:
+
+**Original Images:** Folder ini mencakup subfolder bernama "FOLDS" yang berisi lima fold (fold1-fold5) untuk validasi silang 5-fold dengan gambar asli. Setiap fold memiliki folder terpisah untuk set Test, Train, dan Validation.
+
+**Augmented Images:** Augmented images terdiri dari 5 folds (lipatan) yang di dalamnya hanya terdapat folder Train untuk masing-masing kelas
