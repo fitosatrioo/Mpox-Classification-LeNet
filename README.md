@@ -341,7 +341,36 @@ Ini menunjukkan bahwa model sedang belajar dengan baik dari data pelatihan. Penu
 <p/>
 
 
-### 1. Evaluation Metrics With Confusion Matrix, Accuracy, Precision, Recall, F1 Score and ROC-AUC
+### 2. Evaluation Metrics With Confusion Matrix, Accuracy, Precision, Recall, F1 Score and ROC-AUC
+
+a.) Confusion Matrix
+
+Confusion matrix menunjukkan distribusi prediksi model untuk setiap kelas (Chickenpox, Cowpox, Healthy, HFMD, Measles, Monkeypox) dibandingkan dengan label sebenarnya:
+Diagonal utama (angka besar pada latar biru gelap): Ini menunjukkan jumlah sampel yang diklasifikasikan dengan benar oleh model.
+Chickenpox: 42 benar.
+Cowpox: 35 benar.
+Healthy: 49 benar.
+HFMD: 82 benar.
+Measles: 30 benar.
+Monkeypox: 125 benar.
+Angka non-diagonal: Semua 0, yang berarti tidak ada kesalahan klasifikasi (model sempurna pada matriks ini).
+
+b.) Metrik Evaluasi
+
+Accuracy (0.9973):
+Akurasi menunjukkan proporsi prediksi yang benar terhadap total sampel. Nilai 0.9973 (99.73%) berarti model hampir sempurna dalam memprediksi data uji.
+
+Precision (0.9973):
+Precision mengukur seberapa akurat prediksi positif model untuk masing-masing kelas. Nilai 0.9973 menunjukkan bahwa hampir semua prediksi yang diberi label positif adalah benar.
+
+Recall (0.9973):
+Recall mengukur sejauh mana model berhasil menemukan semua sampel yang relevan (positif sebenarnya). Nilai tinggi ini menunjukkan bahwa model sangat sedikit kehilangan prediksi sampel yang benar.
+
+F1 Score (0.9972):
+F1 score adalah rata-rata harmonis dari precision dan recall. Nilai 0.9972 menunjukkan keseimbangan yang sangat baik antara precision dan recall.
+
+ROC-AUC (1.0000):
+ROC-AUC menunjukkan seberapa baik model dapat membedakan antara kelas-kelas yang berbeda. Nilai 1.0000 menunjukkan model memiliki kemampuan sempurna dalam membedakan kelas.
 
 <p align="center">
 <a href=""><img src="https://github.com/user-attachments/assets/a5af7887-8d72-4764-863c-030aed248162" alt="Confusion Matrix"></a>
