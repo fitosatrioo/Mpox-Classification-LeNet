@@ -280,7 +280,8 @@ def plot_confusion_matrix(cm, class_names, save_path="confusion_matrix.png"):
     :param save_path: Path untuk menyimpan heatmap
     """
     plt.figure(figsize=(8, 6))
-    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=class_names, yticklabels=class_names)
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=class_names,
+     yticklabels=class_names)
     plt.xlabel("Predicted Labels")
     plt.ylabel("True Labels")
     plt.title("Confusion Matrix")
@@ -334,6 +335,7 @@ if __name__ == "__main__":
 <p align="center">
 <a href=""><img src="https://github.com/user-attachments/assets/b4907adb-e6f6-4277-9831-6129bd480eea" alt="Training"></a>
 <p/>
+
 
 ### Evaluation Metrics With Confusion Matrix, Accuracy, Precision, Recall, F1 Score and ROC-AUC
 
