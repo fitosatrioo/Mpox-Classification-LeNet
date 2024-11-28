@@ -23,4 +23,5 @@ Dataset ini dibagi ke dalam dua folder:
 
 Dataset ini terdiri dari gambar-gambar dari enam kelas yang berbeda, yaitu Mpox (284 images), Chickenpox (75 images), Measles (55 images), Cowpox (66 images), Hand-foot-mouth disease or HFMD (161 images), and Healthy (114 images). Dataset ini mencakup 755 gambar original skin lesion yang berasal dari 541 pasien yang berbeda, memastikan sampel yang representatif.
 
+## Commands
 
