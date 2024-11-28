@@ -229,7 +229,8 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
-from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
+from sklearn.metrics import confusion_matrix, accuracy_score, precision_score,
+recall_score, f1_score, roc_auc_score
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -266,7 +267,8 @@ def evaluate_model(model, data_loader):
 
     # Konversi label ke one-hot encoding untuk AUC
     all_labels_onehot = np.eye(6)[all_labels]
-    auc = roc_auc_score(all_labels_onehot, all_probs, multi_class='ovr', average='weighted')
+    auc = roc_auc_score(all_labels_onehot, all_probs, multi_class='ovr',
+    average='weighted')
 
     cm = confusion_matrix(all_labels, all_preds)
 
