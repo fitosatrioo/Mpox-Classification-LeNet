@@ -202,7 +202,9 @@ def main():
             correct_train += (predicted == trg).sum().item()
 
         accuracy_train = 100 * correct_train / total_train
-        print(f"Epoch [{epoch + 1}/{EPOCH}], Train Loss: {loss_train / len(train_loader):.4f}, Accuracy: {accuracy_train:.2f}%")
+        print(f"Epoch [{epoch + 1}/{EPOCH}],
+        Train Loss: {loss_train / len(train_loader):.4f},
+        Accuracy: {accuracy_train:.2f}%")
 
         train_losses.append(loss_train / len(train_loader))
     torch.save(model.state_dict(), "trained_model4.pth")
