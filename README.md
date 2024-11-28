@@ -335,6 +335,8 @@ if __name__ == "__main__":
 <a href=""><img src="https://github.com/user-attachments/assets/b4907adb-e6f6-4277-9831-6129bd480eea" alt="Training"></a>
 <p/>
 
+### Evaluation Metrics With Confusion Matrix, Accuracy, Precision, Recall, F1 Score and ROC-AUC
+
 <p align="center">
 <a href=""><img src="https://github.com/user-attachments/assets/90643e13-deb0-45e1-aad0-e2d0bd81267b" alt="Confusion Matrix"></a>
 <p/>
