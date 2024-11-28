@@ -57,7 +57,7 @@ class Data(Dataset):
                     image = cv.resize(cv.imread(img_path), (32, 32)) / 255
                     self.dataset_valid.append([image, onehot[class_idx]])
         
-        # Debug output
+       
         print(f"Augmented Images (Train): {len(self.dataset_aug)}")
         print(f"Original Images (Train): {len(self.dataset_train)}")
         print(f"Original Images (Test): {len(self.dataset_test)}")
@@ -79,17 +79,11 @@ class Data(Dataset):
 
 if __name__ == "__main__":
     # Paths ke dataset
-    aug_path = "D:/DeepLearning/Assasment - Deep Learning/Dataset/Augmented Images/Augmented Images/FOLDS_AUG/"
-    orig_path = "D:/DeepLearning/Assasment - Deep Learning/Dataset/Original Images/Original Images/FOLDS/"
+    aug_path = "././Dataset/Augmented Images/Augmented Images/FOLDS_AUG/"
+    orig_path = "././Dataset/Original Images/Original Images/FOLDS/"
     
     # Inisialisasi Data
     data = Data(base_folder_aug=aug_path, base_folder_orig=orig_path)
     
-    # Akses dataset
-    # train_data = data.dataset_train
-    # test_data = data.dataset_test
-    # valid_data = data.dataset_valid
-    
-    # print(f"Jumlah data Train: {len(train_data)}")
-    # print(f"Jumlah data Test: {len(test_data)}")
-    # print(f"Jumlah data Valid: {len(valid_data)}")
+   
+
