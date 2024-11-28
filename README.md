@@ -320,7 +320,7 @@ def main():
     print(cm)
 
     # Visualisasi Confusion Matrix sebagai Heatmap
-    class_names = ["Chickenpox", "Cowpox", "Healthy", "HFMD", "Measles", "Monkeypox"]  # Ganti sesuai nama kelas
+    class_names = ["Chickenpox", "Cowpox", "Healthy", "HFMD", "Measles", "Monkeypox"] 
     plot_confusion_matrix(cm, class_names, save_path="./confusion_matrix.png")
     # print("Confusion Matrix heatmap saved as confusion_matrix.png")
 
@@ -330,6 +330,7 @@ if __name__ == "__main__":
 
 ## Results
 
+### Plot The Training Loss With 30 Epoch
 <p align="center">
 <a href=""><img src="https://github.com/user-attachments/assets/b4907adb-e6f6-4277-9831-6129bd480eea" alt="Training"></a>
 <p/>
