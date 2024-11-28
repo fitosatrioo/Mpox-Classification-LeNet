@@ -331,7 +331,7 @@ if __name__ == "__main__":
 
 ## Results
 
-### Plot The Training Loss With 30 Epoch
+### 1. Plot The Training Loss With 30 Epoch
 Untuk training data pada dataset ini, menggunakan 30 epoch. Nilai loss awal sekitar 1.6, lalu secara konsisten menurun hingga mencapai nilai mendekati 0.2 pada akhir epoch ke-30.
 Ini menunjukkan bahwa model sedang belajar dengan baik dari data pelatihan. Penurunan loss berarti model semakin baik memprediksi hasil dengan mengurangi kesalahan selama pelatihan. mungkin bisa lebih optimal ketika melakukan 50 - 100 epoch. Kurva loss juga terlihat halus dan tidak ada lonjakan besar. Hal ini mengindikasikan bahwa learning rate yang digunakan sudah sesuai dan model terhindar dari masalah seperti diverging atau overfitting dalam proses pelatihan.
 
@@ -341,8 +341,8 @@ Ini menunjukkan bahwa model sedang belajar dengan baik dari data pelatihan. Penu
 <p/>
 
 
-### Evaluation Metrics With Confusion Matrix, Accuracy, Precision, Recall, F1 Score and ROC-AUC
+### 1. Evaluation Metrics With Confusion Matrix, Accuracy, Precision, Recall, F1 Score and ROC-AUC
 
 <p align="center">
-<a href=""><img src="https://github.com/user-attachments/assets/90643e13-deb0-45e1-aad0-e2d0bd81267b" alt="Confusion Matrix"></a>
+<a href=""><img src="https://github.com/user-attachments/assets/a5af7887-8d72-4764-863c-030aed248162" alt="Confusion Matrix"></a>
 <p/>
