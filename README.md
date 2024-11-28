@@ -119,91 +119,27 @@ if __name__ == "__main__":
 Buat folder dengan Models yang berisi tentang file - file model yang akan digunakan sebagai training. saya menggunakan model LeNet yang bisa dipanggil melalui library torch.nn
 
 ```py
-import os
-import cv2 as cv
-import numpy as np
+
 import torch
-from torch.utils.data import Dataset
+import torch.nn as nn
+import torch.nn.functional as F
 
-class Data(Dataset):
-    def __init__(self, base_folder_aug, base_folder_orig):
-        """
-        :param base_folder_aug: Path folder untuk Augmented Images
-        :param base_folder_orig: Path folder untuk Original Images
-        """
-        self.dataset_aug = []
-        self.dataset_train = []
-        self.dataset_test = []
-        self.dataset_valid = []
-        onehot = np.eye(6)  # One-hot encoding untuk 6 kelas
-        
-        # Load data dari Augmented Images (Train saja)
-        for fold_num in range(1, 6):
-            aug_folder = os.path.join(base_folder_aug, f"fold{fold_num}_AUG/Train/")
-            for class_idx, class_name in enumerate(os.listdir(aug_folder)):
-                class_folder = os.path.join(aug_folder, class_name)
-                for img_name in os.listdir(class_folder):
-                    img_path = os.path.join(class_folder, img_name)
-                    image = cv.resize(cv.imread(img_path), (32, 32)) / 255
-                    self.dataset_aug.append([image, onehot[class_idx]])
-        
-        # Load data dari Original Images (Train, Test, Valid)
-        for fold_num in range(1, 6):
-            fold_folder = os.path.join(base_folder_orig, f"fold{fold_num}/")
-            
-            # Load Train
-            train_folder = os.path.join(fold_folder, "Train/")
-            for class_idx, class_name in enumerate(os.listdir(train_folder)):
-                class_folder = os.path.join(train_folder, class_name)
-                for img_name in os.listdir(class_folder):
-                    img_path = os.path.join(class_folder, img_name)
-                    image = cv.resize(cv.imread(img_path), (32, 32)) / 255
-                    self.dataset_train.append([image, onehot[class_idx]])
+class LeNet(nn.Module):
+    def __init__(self, num_classes=6):
+        super(LeNet, self).__init__()
+        self.conv1 = nn.Conv2d(3, 6, kernel_size=5)
+        self.pool = nn.MaxPool2d(2, 2)
+        self.conv2 = nn.Conv2d(6, 16, kernel_size=5)
+        self.fc1 = nn.Linear(16 * 5 * 5, 120)
+        self.fc2 = nn.Linear(120, 84)
+        self.fc3 = nn.Linear(84, num_classes)
 
-            # Load Test
-            test_folder = os.path.join(fold_folder, "Test/")
-            for class_idx, class_name in enumerate(os.listdir(test_folder)):
-                class_folder = os.path.join(test_folder, class_name)
-                for img_name in os.listdir(class_folder):
-                    img_path = os.path.join(class_folder, img_name)
-                    image = cv.resize(cv.imread(img_path), (32, 32)) / 255
-                    self.dataset_test.append([image, onehot[class_idx]])
-
-            # Load Valid
-            valid_folder = os.path.join(fold_folder, "Valid/")
-            for class_idx, class_name in enumerate(os.listdir(valid_folder)):
-                class_folder = os.path.join(valid_folder, class_name)
-                for img_name in os.listdir(class_folder):
-                    img_path = os.path.join(class_folder, img_name)
-                    image = cv.resize(cv.imread(img_path), (32, 32)) / 255
-                    self.dataset_valid.append([image, onehot[class_idx]])
-        
-       
-        print(f"Augmented Images (Train): {len(self.dataset_aug)}")
-        print(f"Original Images (Train): {len(self.dataset_train)}")
-        print(f"Original Images (Test): {len(self.dataset_test)}")
-        print(f"Original Images (Valid): {len(self.dataset_valid)}")
-
-    def __len__(self):
-        """Mengembalikan jumlah data di Augmented Images (default)."""
-        return len(self.dataset_aug)
-
-    def __getitem__(self, idx):
-        """
-        :param idx: Index data
-        :return: Tuple (image, label) dalam format tensor
-        """
-        features, label = self.dataset_aug[idx]
-        return (torch.tensor(features, dtype=torch.float32).permute(2, 0, 1),  # Convert to CHW format
-                torch.tensor(label, dtype=torch.float32))
-
-
-if __name__ == "__main__":
-    # Paths ke dataset
-    aug_path = "././Dataset/Augmented Images/Augmented Images/FOLDS_AUG/"
-    orig_path = "././Dataset/Original Images/Original Images/FOLDS/"
-    
-    # Inisialisasi Data
-    data = Data(base_folder_aug=aug_path, base_folder_orig=orig_path)
-    
+    def forward(self, x):
+        x = self.pool(F.relu(self.conv1(x)))
+        x = self.pool(F.relu(self.conv2(x)))
+        x = x.reshape(-1, 16 * 5 * 5)  # Flatten
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = self.fc3(x)
+        return x
 ```
