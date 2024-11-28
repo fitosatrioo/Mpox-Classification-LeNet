@@ -6,8 +6,8 @@ from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, r
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from Models.LeNet import LeNet  # Pastikan Anda mendefinisikan model LeNet di file Models/LeNet.py
-from Utils.getData import Data  # Pastikan Anda mendefinisikan kelas Data di file Utils/getData.py
+from Models.LeNet import LeNet
+from Utils.getData import Data
 
 def evaluate_model(model, data_loader):
     model.eval()
@@ -18,7 +18,7 @@ def evaluate_model(model, data_loader):
     with torch.no_grad():
         for src, trg in data_loader:
             src = src.permute(0, 3, 1, 2).float()
-            trg = torch.argmax(trg, dim=1)  # Konversi one-hot encoding ke indeks kelas
+            trg = torch.argmax(trg, dim=1)
             
             outputs = model(src)
             probs = torch.softmax(outputs, dim=1)
@@ -63,30 +63,26 @@ def plot_confusion_matrix(cm, class_names, save_path="confusion_matrix.png"):
 def main():
     BATCH_SIZE = 4
     LEARNING_RATE = 0.001
-    NUM_CLASSES = 6  # Sesuaikan dengan jumlah kelas yang ada
+    NUM_CLASSES = 6 
 
-    # Paths ke dataset
-    aug_path = "D:/DeepLearning/Assasment - Deep Learning/Dataset/Augmented Images/Augmented Images/FOLDS_AUG/"
-    orig_path = "D:/DeepLearning/Assasment - Deep Learning/Dataset/Original Images/Original Images/FOLDS/"
+    aug_path = "./Dataset/Augmented Images/Augmented Images/FOLDS_AUG/"
+    orig_path = "./Dataset/Original Images/Original Images/FOLDS/"
 
-    # Inisialisasi dataset dan dataloaders
+
     dataset = Data(base_folder_aug=aug_path, base_folder_orig=orig_path)
-
-    # Load data test dari folder original images
     test_data = dataset.dataset_test
     test_loader = DataLoader(test_data, batch_size=BATCH_SIZE, shuffle=False)
 
-    # Definisikan model LeNet
+    # model LeNet
     model = LeNet(num_classes=NUM_CLASSES)
 
-    # Memuat model yang telah dilatih (misalnya, dari file)
     model.load_state_dict(torch.load("trained_model4.pth"))
     model.eval()
 
     # Evaluasi model pada data test
     accuracy, precision, recall, f1, auc, cm = evaluate_model(model, test_loader)
 
-    # Print hasil evaluasi
+    # hasil evaluasi
     print("Evaluasi pada data test:")
     print(f"Accuracy: {accuracy:.4f}")
     print(f"Precision: {precision:.4f}")
