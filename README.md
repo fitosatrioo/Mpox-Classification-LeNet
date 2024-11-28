@@ -20,3 +20,7 @@ Dataset ini dibagi ke dalam dua folder:
 **Original Images:** Folder ini mencakup subfolder bernama "FOLDS" yang berisi lima fold (fold1-fold5) untuk validasi silang 5-fold dengan gambar asli. Setiap fold memiliki folder terpisah untuk set Test, Train, dan Validation.
 
 **Augmented Images:** Augmented images terdiri dari 5 folds (lipatan) yang di dalamnya hanya terdapat folder Train untuk masing-masing kelas
+
+Dataset ini terdiri dari gambar-gambar dari enam kelas yang berbeda, yaitu Mpox (284 images), Chickenpox (75 images), Measles (55 images), Cowpox (66 images), Hand-foot-mouth disease or HFMD (161 images), and Healthy (114 images). Dataset ini mencakup 755 gambar original skin lesion yang berasal dari 541 pasien yang berbeda, memastikan sampel yang representatif.
+
+
