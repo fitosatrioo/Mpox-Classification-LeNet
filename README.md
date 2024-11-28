@@ -373,6 +373,10 @@ F1 score adalah rata-rata harmonis dari precision dan recall. Nilai 0.9972 menun
 ROC-AUC menunjukkan seberapa baik model dapat membedakan antara kelas-kelas yang berbeda. Nilai 1.0000 menunjukkan model memiliki kemampuan sempurna dalam membedakan kelas.
 
 <p align="center">
+<a href=""><img src="https://github.com/user-attachments/assets/c6ecea06-0cbc-4ec8-ac24-1c6e0ce49682" alt="Confusion Matrix"></a>
+<p/>
+
+<p align="center">
 <a href=""><img src="https://github.com/user-attachments/assets/a5af7887-8d72-4764-863c-030aed248162" alt="Confusion Matrix"></a>
 <p/>
 
