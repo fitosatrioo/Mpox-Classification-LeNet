@@ -383,3 +383,15 @@ ROC-AUC menunjukkan seberapa baik model dapat membedakan antara kelas-kelas yang
 
 
 ## Citation
+
+```
+@article{Nafisa2024,
+title={A Web-based Mpox Skin Lesion Detection System Using State-of-the-art Deep Learning Models Considering Racial Diversity},
+author={Ali, Shams Nafisa and Ahmed, Md. Tazuddin and Jahan, Tasnim and Paul, Joydip and Sani, S. M. Sakeef and Noor, Nawshaba and Asma, Anzirun Nahar and Hasan, Taufiq},
+journal={Biomedical Signal Processing and Control},
+volume={98},
+pages={106742},
+year={2024},
+publisher={Elsevier}
+}
+```
