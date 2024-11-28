@@ -376,10 +376,9 @@ ROC-AUC menunjukkan seberapa baik model dapat membedakan antara kelas-kelas yang
 <a href=""><img src="https://github.com/user-attachments/assets/a5af7887-8d72-4764-863c-030aed248162" alt="Confusion Matrix"></a>
 <p/>
 
-### 3. Bukti Output Evaluation Metrics
+### 3. Output Evaluation Metrics
 
-<p align="center">
 <a href=""><img src="https://github.com/user-attachments/assets/c6ecea06-0cbc-4ec8-ac24-1c6e0ce49682" alt="Confusion Matrix"></a>
-<p/>
+
 
 ## Citation
