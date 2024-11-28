@@ -21,8 +21,3 @@ class LeNet(nn.Module):
         x = self.fc3(x)
         return x
 
-# Misalnya kita ingin membuat model untuk 6 kelas
-# model = LeNet(num_classes=6)
-
-# Cek arsitektur model
-# print(model)
