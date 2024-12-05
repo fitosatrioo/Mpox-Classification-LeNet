@@ -73,23 +73,13 @@ class Data(Dataset):
         :return: Tuple (image, label) dalam format tensor
         """
         features, label = self.dataset_aug[idx]
-        return (torch.tensor(features, dtype=torch.float32).permute(2, 0, 1),  # Convert to CHW format
+        return (torch.tensor(features, dtype=torch.float32).permute(2, 0, 1),  
                 torch.tensor(label, dtype=torch.float32))
 
 
 if __name__ == "__main__":
-    # Paths ke dataset
-    aug_path = "D:/DeepLearning/Assasment - Deep Learning/Dataset/Augmented Images/Augmented Images/FOLDS_AUG/"
-    orig_path = "D:/DeepLearning/Assasment - Deep Learning/Dataset/Original Images/Original Images/FOLDS/"
-    
-    # Inisialisasi Data
+    aug_path = "././Dataset/Augmented Images/Augmented Images/FOLDS_AUG/"
+    orig_path = "././Dataset/Original Images/Original Images/FOLDS/"
     data = Data(base_folder_aug=aug_path, base_folder_orig=orig_path)
     
-    # Akses dataset
-    # train_data = data.dataset_train
-    # test_data = data.dataset_test
-    # valid_data = data.dataset_valid
-    
-    # print(f"Jumlah data Train: {len(train_data)}")
-    # print(f"Jumlah data Test: {len(test_data)}")
-    # print(f"Jumlah data Valid: {len(valid_data)}")
+

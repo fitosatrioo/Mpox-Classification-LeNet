@@ -15,14 +15,9 @@ class LeNet(nn.Module):
     def forward(self, x):
         x = self.pool(F.relu(self.conv1(x)))
         x = self.pool(F.relu(self.conv2(x)))
-        x = x.reshape(-1, 16 * 5 * 5)  # Flatten
+        x = x.reshape(-1, 16 * 5 * 5) 
         x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
         x = self.fc3(x)
         return x
 
-# Misalnya kita ingin membuat model untuk 6 kelas
-# model = LeNet(num_classes=6)
-
-# Cek arsitektur model
-# print(model)
