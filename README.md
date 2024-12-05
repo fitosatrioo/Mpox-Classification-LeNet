@@ -81,10 +81,21 @@ python testing.py
 
 ## Results
 
+### 1. Training With 50 Epoch
+
+Dapat dilihat pada grafik dibawah ini, Training Loss menurun secara konsisten seiring bertambahnya epoch, yang menunjukkan bahwa model semakin mampu mempelajari pola dalam data pelatihan.
+Penurunan yang stabil ini menunjukkan bahwa optimisasi model bekerja dengan baik. sedangkan pada Validation Loss juga menurun secara signifikan, terutama pada awal epoch. Validation Loss lebih rendah dibandingkan Training Loss setelah beberapa epoch, yang menunjukkan bahwa model generalisasi dengan baik pada data validasi. Dengan Validation Loss yang sangat rendah (hampir mendekati nol), dapat diinterpretasikan bahwa model memiliki performa yang sangat baik pada data validasi. Model LeNet pretrained ini menunjukkan performa yang baik dengan tidak adanya tanda overfitting dan loss yang konsisten menurun.
+
 <h1 align="center">
    <img src="https://github.com/user-attachments/assets/2c3fc534-635e-4e68-9736-1642f3e027a3">
 </h1>
 
+## 2. Metrics Evaluation (Accuracy, Precision, Recall, F1-Score, ROC-AUC)
+
 <h1 align="center">
    <img src="https://github.com/user-attachments/assets/cdba663b-03d3-4e15-84aa-7933845d0808">
 </h1>
+
+
+## Citation
+
