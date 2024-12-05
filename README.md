@@ -90,11 +90,11 @@ Penurunan yang stabil ini menunjukkan bahwa optimisasi model bekerja dengan baik
    <img src="https://github.com/user-attachments/assets/2c3fc534-635e-4e68-9736-1642f3e027a3">
 </h1>
 
-## 2. Metrics Evaluation With Confusion Matrix, Accuracy, Precision, Recall, F1-Score, ROC-AUC
+### 2. Metrics Evaluation With Confusion Matrix, Accuracy, Precision, Recall, F1-Score, ROC-AUC
 ### A.) Confusion Matrix Analysis
-- True Positives:
-Angka pada diagonal utama menunjukkan jumlah sampel yang diklasifikasikan dengan benar ke kelas aslinya.
+<h4>True Positive</h4>
 
+Angka pada diagonal utama menunjukkan jumlah sampel yang diklasifikasikan dengan benar ke kelas aslinya.
 - Chickenpox: 42 sampel diklasifikasikan benar sebagai Chickenpox.
 - Cowpox: 35 sampel diklasifikasikan benar sebagai Cowpox.
 - Healthy: 49 sampel diklasifikasikan benar sebagai Healthy.
