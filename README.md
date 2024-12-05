@@ -75,8 +75,8 @@ python testing.py
 
 ```
 **Output:**
-<h1 align="center">
-   <img src="..">
+<h1>
+   <img src="https://github.com/user-attachments/assets/f589647d-6407-46ad-93ed-90b4279e9c09">
 </h1>
 
 ## Results
