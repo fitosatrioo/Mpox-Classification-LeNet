@@ -90,7 +90,7 @@ Penurunan yang stabil ini menunjukkan bahwa optimisasi model bekerja dengan baik
    <img src="https://github.com/user-attachments/assets/2c3fc534-635e-4e68-9736-1642f3e027a3">
 </h1>
 
-### 2. Metrics Evaluation With Confusion Matrix, Accuracy, Precision, Recall, F1-Score, ROC-AUC
+### 2. Confusion Matrix and Metrics Evaluation  (Accuracy, Precision, Recall, F1-Score, ROC-AUC)
 ### A.) Confusion Matrix Analysis
 <h4>True Positive</h4>
 
@@ -101,6 +101,31 @@ Angka pada diagonal utama menunjukkan jumlah sampel yang diklasifikasikan dengan
 - HFMD: 82 sampel diklasifikasikan benar sebagai HFMD.
 - Measles: 30 sampel diklasifikasikan benar sebagai Measles.
 - Monkeypox: 125 sampel diklasifikasikan benar sebagai Monkeypox.
+
+<h4>Missclasification</h4>
+
+Ada 1 sampel dari kelas Healthy salah diklasifikasikan sebagai Monkeypox. Ini terlihat dari angka 1 di baris "Healthy" (True Label) dan kolom "Monkeypox" (Predicted Label).
+
+
+### B.) Metrics Evaluation
+
+- **Accuracy: 0.9973 (99.73%)**
+Ini Menunjukkan proporsi total prediksi yang benar dari semua kelas.
+
+- **Precision: 0.9973 (99.73%)**
+Menunjukkan ketepatan model dalam mengklasifikasikan kelas positif (berapa banyak prediksi benar dari total prediksi kelas positif).
+
+- **Recall: 0.9973 (99.73%)**
+Mengukur sensitivitas model, yaitu seberapa baik model mampu mendeteksi sampel dari kelas tertentu.
+
+- **F1 Score: 0.9972 (99.72%)**
+Kombinasi dari precision dan recall, yang menyeimbangkan keduanya. Nilai tinggi menunjukkan model yang sangat baik.
+
+- **ROC-AUC: 1.000 (100%)**
+Area under the ROC curve adalah 1.000, yang menunjukkan model memiliki performa sempurna dalam membedakan antar kelas.
+
+Model LeNet pretrained menunjukkan kinerja yang sangat baik dalam tugas klasifikasi multi-kelas dengan akurasi sebesar 99.73%, yang mencerminkan proporsi prediksi yang benar dari seluruh data. Precision dan recall masing-masing sebesar 99.73% menunjukkan bahwa model ini memiliki ketepatan tinggi dalam mengklasifikasikan sampel positif serta sensitivitas yang baik dalam mendeteksi semua sampel dari setiap kelas. Kombinasi precision dan recall yang seimbang menghasilkan F1-score sebesar 99.72%, menandakan kemampuan model untuk menghindari bias terhadap salah satu metrik. Selain itu, nilai ROC-AUC sebesar 1.000 menunjukkan bahwa model ini mampu membedakan antar kelas dengan sempurna hanya dengan 50 epoch saja. 
+
 
 <h1 align="center">
    <img src="https://github.com/user-attachments/assets/cdba663b-03d3-4e15-84aa-7933845d0808">
