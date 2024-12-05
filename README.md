@@ -16,6 +16,13 @@ Dari Juni 2022 hingga Mei 2023, Dataset Lesi Kulit Mpox (MSLD) telah mengalami d
 
 ## About Dataset
 
+Dataset ini diorganisir ke dalam dua folder:
+
+Original Images: Folder ini mencakup subfolder bernama "FOLDS" yang berisi lima fold (fold1-fold5) untuk validasi silang 5-fold dengan gambar asli. Setiap fold memiliki folder terpisah untuk set uji, pelatihan, dan validasi.
+
+Augmented Images: Untuk meningkatkan tugas klasifikasi, berbagai teknik augmentasi data. Agar hasilnya dapat direproduksi, gambar-gambar augmentasi disediakan dalam folder ini. Folder ini berisi subfolder bernama "FOLDS_AUG" yang berisi gambar-gambar augmentasi dari set pelatihan dari setiap fold dalam subfolder "FOLDS" pada folder "original images". Proses augmentasi menghasilkan peningkatan jumlah gambar sekitar 14 kali lipat.
+
+Dataset ini terdiri dari gambar-gambar dari enam kelas yang berbeda, yaitu Mpox(284 images), Chickenpox (75 images), Measles (55 images), Cowpox (66 images), Hand-foot-mouth disease or HFMD (161 images), and Healthy (114 images). Dataset ini mencakup 755 original skin lesion images yang berasal dari 541 pasien yang berbeda, memastikan sampel yang representatif.
 ## Commands
 
 ```py
