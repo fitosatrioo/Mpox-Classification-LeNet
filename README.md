@@ -11,7 +11,7 @@ Selama fase awal puncak wabah Mpox, tantangan signifikan muncul akibat tidak ada
 
 Untuk mengatasi kebutuhan mendesak ini, pengembangan metode berbantuan komputer memerlukan sejumlah besar data yang beragam, termasuk gambar lesi kulit Mpox dari individu dengan jenis kelamin, etnis, dan warna kulit yang berbeda. Namun, kelangkaan data yang tersedia menjadi hambatan besar dalam upaya ini. Menanggapi situasi kritis ini, kelompok penelitian kami mengambil inisiatif untuk mengembangkan salah satu dataset pertama (MSLD) yang dirancang khusus untuk Mpox, mencakup berbagai kelas, termasuk sampel non-Mpox.
 
-Dari Juni 2022 hingga Mei 2023, Dataset Lesi Kulit Mpox (MSLD) telah mengalami dua iterasi, menghasilkan versi saat ini, MSLD v2.0. Versi sebelumnya mencakup dua kelas: "Mpox" dan "Lainnya" (non-Mpox), di mana kelas "Lainnya" terdiri dari gambar lesi kulit cacar air dan campak, yang dipilih karena kemiripannya dengan Mpox. Berdasarkan keterbatasan yang teridentifikasi pada rilis awal, kami mengembangkan versi yang lebih lengkap dan lebih komprehensif, yaitu MSLD v2.0. Dataset yang diperbarui ini mencakup lebih banyak kelas dan menyediakan set gambar yang lebih beragam, cocok untuk klasifikasi multi-kelas.
+Dari Juni 2022 hingga Mei 2023, Dataset Lesi Kulit Mpox (MSLD) telah mengalami dua iterasi, menghasilkan versi saat ini, MSLD v2.0. Versi sebelumnya mencakup dua kelas: "Mpox" dan "Lainnya" (non-Mpox), di mana kelas "Lainnya" terdiri dari gambar lesi kulit cacar air dan campak, yang dipilih karena kemiripannya dengan Mpox. Berdasarkan keterbatasan yang teridentifikasi pada rilis awal, kami mengembangkan versi yang lebih lengkap dan lebih komprehensif, yaitu MSLD v2.0. Dataset yang diperbarui ini mencakup lebih banyak kelas dan menyediakan set gambar yang lebih beragam, cocok untuk klasifikasi multi-kelas. source: https://www.kaggle.com/datasets/joydippaul/mpox-skin-lesion-dataset-version-20-msld-v20/data
 
 ## About Dataset
 
@@ -133,4 +133,15 @@ Model LeNet pretrained menunjukkan kinerja yang sangat baik dalam tugas klasifik
 
 
 ## Citation
+```
+@article{Nafisa2024,
+title={A Web-based Mpox Skin Lesion Detection System Using State-of-the-art Deep Learning Models Considering Racial Diversity},
+author={Ali, Shams Nafisa and Ahmed, Md. Tazuddin and Jahan, Tasnim and Paul, Joydip and Sani, S. M. Sakeef and Noor, Nawshaba and Asma, Anzirun Nahar and Hasan, Taufiq},
+journal={Biomedical Signal Processing and Control},
+volume={98},
+pages={106742},
+year={2024},
+publisher={Elsevier}
+}
+```
 
